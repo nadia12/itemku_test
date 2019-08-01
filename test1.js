@@ -1,5 +1,5 @@
 
-// we need to generate, ex: Prodo came in => username, verb
+// we need to generate words from record, ex: Prodo came in => username, verb
 function generateWords(record, nameRecords){
   var words = {
     dictionaries: {
@@ -45,4 +45,6 @@ function solution(records) {
  return answers
 }
 
-console.log(solution(["Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo", "Change uid4567 Ryan"]))
+
+var records =["Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo", "Change uid4567 Ryan"]
+console.log(solution(records))
