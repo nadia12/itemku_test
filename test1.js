@@ -1,21 +1,23 @@
 
+// we need to generate, ex: Prodo came in => username, verb
 function generateWords(record, nameRecords){
   var words = {
     dictionaries: {
       'Enter': 'came in',
       'Leave': 'has left'
     }, 
+    arrayWords:  record.split(' '),
     generate: function() {
-      arrWords = record.split(' ')
-      verb = this.dictionaries[arrWords[0]]
-      nickname = nameRecords[arrWords[1]]
-      if(!!verb) return [nickname, verb].join(' ')
+      username =  nameRecords[this.arrayWords[1]],
+      verb = this.dictionaries[this.arrayWords[0]]
+      if(!!verb) return `${username} ${verb}`
     }
    }
 
   return words.generate() 
 }
 
+// {[id]: username}
 function usernameRecords(records) {
   var nameRecords = {}
 
